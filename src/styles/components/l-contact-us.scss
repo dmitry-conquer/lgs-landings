@@ -1,0 +1,56 @@
+@use "../helpers/" as *;
+
+.l-contact-us {
+  padding: fluid(60, 120) 0 fluid(40, 80) 0;
+  &__body {
+    display: flex;
+    gap: rem(20);
+    @include medium {
+      flex-direction: column-reverse;
+    }
+  }
+  &__video {
+    flex: 0 1 rem(807);
+    position: relative;
+    padding: rem(20);
+    border: 1px dashed #0000001e;
+    @include medium {
+      flex: 0 1 auto;
+    }
+  }
+  &__video-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__video-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
+    @include hover {
+      transform: scale(1.1) translate(-50%, -50%);
+    }
+  }
+  &__content {
+    flex: 0 1 rem(571);
+    @include medium {
+      flex: 0 1 auto;
+    }
+    p {
+      font-size: fluid(16, 18);
+      line-height: 1.5;
+    }
+  }
+  &__content-form {
+    margin-top: rem(32);
+    h3 {
+      color: #333333;
+      font-size: fluid(18, 20);
+      text-align: center;
+      margin-bottom: rem(16);
+      font-weight: 700;
+    }
+  }
+}

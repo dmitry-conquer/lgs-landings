@@ -1,0 +1,44 @@
+@use "../helpers/" as *;
+
+.l-faq {
+  &__container {
+    position: relative;
+    padding-block: fluid(40, 80) !important;
+  }
+  &__bg {
+    pointer-events: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    @include small {
+      display: none;
+    }
+    span {
+      aspect-ratio: 1 / 1;
+      background-color: #d9d9d92d;
+      border-radius: 50%;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(320), 1fr));
+    gap: rem(40);
+  }
+  &__item {
+    h3 {
+      color: #333333;
+      font-weight: 700;
+      font-size: fluid(18, 20);
+      margin-bottom: rem(16);
+    }
+    p {
+      font-size: fluid(16, 18);
+      color: #333333;
+      line-height: 1.5;
+    }
+  }
+}

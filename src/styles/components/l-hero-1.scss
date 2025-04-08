@@ -1,0 +1,38 @@
+@use "../helpers/" as *;
+
+.l-hero-1 {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: fluid(40, 230) 0 rem(50) 0;
+  background-color: #333333;
+  @include medium {
+    padding: rem(40) 0 rem(50) 0;
+    background-image: none !important;
+    height: auto;
+  }
+  &__content {
+    color: #fff;
+    text-align: center;
+    max-width: rem(1094);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      font-weight: 700;
+      font-size: fluid(32, 50);
+      margin-bottom: rem(32);
+      line-height: 1.2;
+    }
+    p {
+      font-weight: 500;
+      font-size: fluid(20, 30);
+      color: #fff;
+    }
+  }
+  &__button {
+    margin-top: fluid(32, 54);
+  }
+}

@@ -1,0 +1,28 @@
+@use "../helpers/" as *;
+
+.proshield-gallery {
+  &__items {
+    display: grid;
+    gap: fluid(14, 20);
+    grid-template-columns: repeat(4, 1fr);
+    @include small {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__item {
+    &:nth-child(5) {
+      grid-column: span 2;
+      grid-row: span 2;
+      @include small {
+        grid-column: auto;
+        grid-row: auto;
+      }
+    }
+    &_empty {
+      border: 1px dashed #0000006d;
+      @include small {
+        display: none;
+      }
+    }
+  }
+}

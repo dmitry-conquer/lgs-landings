@@ -1,0 +1,50 @@
+@use "../helpers/" as *;
+
+.l-grid-items {
+  &__container {
+  }
+  &__title {
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: rem(20);
+    @include large {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include medium {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include x-small {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+    border: 1px dashed #0000001c;
+    background-color: #f0f0f0;
+    padding: fluid(20, 24);
+    h3 {
+      color: #333333;
+      font-weight: 700;
+      font-size: fluid(18, 20);
+      margin-bottom: rem(20);
+    }
+    p {
+      color: #333333;
+      line-height: 1.5;
+      font-size: fluid(16, 18);
+    }
+    &_image {
+      border: none;
+      padding: 0;
+      @include x-small {
+        display: none;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

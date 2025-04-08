@@ -1,0 +1,56 @@
+@use "reset";
+@use "helpers" as *;
+@use "./components/l-hero-1";
+@use "./components/l-contact-us";
+@use "./components/l-grid-items";
+@use "./components/choose-finish";
+@use "./components/any-space";
+@use "./components/proshield-gallery";
+@use "./components/l-reviews";
+@use "./components/l-faq";
+@use "./components/l-preservation";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.landing-page {
+  background-color: #fffcf3;
+  p:not(:last-of-type) {
+    margin-bottom: rem(8);
+  }
+}
+
+.l-section {
+  padding-block: fluid(40, 80);
+}
+
+.l-title {
+  font-weight: 700;
+  font-size: fluid(24, 30);
+  margin-bottom: fluid(30, 40);
+  text-align: center;
+  color: #333333;
+}
+
+.l-container {
+  max-width: rem(1440);
+  padding: 0 rem(20);
+  margin: 0 auto;
+}
+
+.landing-button {
+  background-color: #e6cc6d;
+  padding: rem(12) rem(24);
+  color: #000;
+  text-transform: uppercase;
+  line-height: 1.4;
+  font-weight: 600;
+  font-size: rem(14);
+  transition: opacity 0.3s ease;
+  @include hover {
+    opacity: 0.7;
+  }
+}

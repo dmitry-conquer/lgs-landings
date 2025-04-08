@@ -1,0 +1,42 @@
+@use "../helpers/" as *;
+
+.l-reviews {
+  &__container {
+  }
+  &__title {
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(320), 1fr));
+    gap: rem(20) rem(32);
+  }
+  &__item {
+  }
+}
+
+.l-review {
+  border: 1px dashed #0000005e;
+  padding: fluid(20, 32);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: rem(24);
+  &__rating {
+  }
+  &__text {
+    line-height: 1.5;
+    color: #333333;
+    font-size: fluid(16, 18);
+  }
+  &__info {
+  }
+  &__author {
+    font-weight: 700;
+    font-size: rem(16);
+    line-height: 1.5;
+  }
+  &__role {
+    font-size: rem(16);
+    line-height: 1.5;
+  }
+}
