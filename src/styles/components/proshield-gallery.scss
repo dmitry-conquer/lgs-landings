@@ -10,6 +10,8 @@
     }
   }
   &__item {
+    overflow: hidden;
+
     &:nth-child(5) {
       grid-column: span 2;
       grid-row: span 2;
@@ -23,6 +25,12 @@
       @include small {
         display: none;
       }
+    }
+  }
+  img {
+    transition: transform 0.4s ease;
+    @include hover {
+      transform: scale(1.08);
     }
   }
 }

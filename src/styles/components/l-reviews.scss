@@ -2,8 +2,7 @@
 
 .l-reviews {
   &__container {
-  }
-  &__title {
+    padding-inline: fluid(20, 64) !important;
   }
   &__items {
     display: grid;

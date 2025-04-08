@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -25,7 +26,7 @@
             <div class="l-contact-us__body">
               <div class="l-contact-us__video">
                 <img src="/images/1.webp" alt="" loading="lazy" class="l-contact-us__video-placeholder" />
-                <a class="l-contact-us__video-play" href="#"
+                <a data-gallery="video" class="l-contact-us__video-play glightbox" href="https://www.youtube.com/watch?v=NpEaa2P7qZI"
                   ><svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <foreignObject x="-3.5" y="-3.5" width="71.4167" height="71.4166"
                       ><div
@@ -167,27 +168,27 @@
               Residential Services Gallery
             </h2>
             <div class="proshield-gallery__items">
-              <div class="proshield-gallery__item">
+              <a href="/images/7.webp" data-gallery="gallery" class="proshield-gallery__item glightbox">
                 <img src="/images/7.webp" alt="" />
-              </div>
-              <div class="proshield-gallery__item">
+              </a>
+              <a href="/images/7.webp" data-gallery="gallery" class="proshield-gallery__item glightbox">
                 <img src="/images/7.webp" alt="" />
-              </div>
+              </a>
               <div class="proshield-gallery__item proshield-gallery__item_empty"></div>
-              <div class="proshield-gallery__item">
+              <a href="/images/7.webp" data-gallery="gallery" class="proshield-gallery__item glightbox">
                 <img src="/images/7.webp" alt="" />
-              </div>
-              <div class="proshield-gallery__item">
+              </a>
+              <a href="/images/7.webp" data-gallery="gallery" class="proshield-gallery__item glightbox">
                 <img src="/images/7.webp" alt="" />
-              </div>
-              <div class="proshield-gallery__item">
+              </a>
+              <a href="/images/7.webp" data-gallery="gallery" class="proshield-gallery__item glightbox">
                 <img src="/images/7.webp" alt="" />
-              </div>
+              </a>
               <div class="proshield-gallery__item proshield-gallery__item_empty"></div>
               <div class="proshield-gallery__item proshield-gallery__item_empty"></div>
-              <div class="proshield-gallery__item">
+              <a href="/images/7.webp" data-gallery="gallery" class="proshield-gallery__item glightbox">
                 <img src="/images/7.webp" alt="" />
-              </div>
+              </a>
             </div>
           </div>
         </section>
@@ -292,9 +293,33 @@
             </div>
           </div>
         </section>
+
+        <section class="shield-surfaces l-section">
+          <div class="shield-surfaces__container l-container">
+            <div class="shield-surfaces__inner" style="background-image: url(&quot;/images/footer.webp&quot;)">
+              <div class="shield-surfaces__content">
+                <h2>Ready to Shield Your Surfaces?</h2>
+                <p>Don’t wait until your stone is damaged — protect it today with PROSHIELD countertop protectors.</p>
+                <p><a href="#">Contact us now</a> for a free quote or in-home consultation.</p>
+              </div>
+              <div class="shield-surfaces__links">
+                <a href="#contact-form" class="shield-surfaces__link landing-button">Schedule an Appointment</a>
+                <a href="#" class="shield-surfaces__link landing-button landing-button_stroke">Contact us</a>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       {{> footer}}
     </div>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+    <script type="text/javascript">
+      const lightbox = GLightbox({
+        selector: ".glightbox",
+        autoplayVideos: true,
+      });
+    </script>
     <script type="module" src="../src/scripts/main.ts" defer></script>
   </body>
 </html>
