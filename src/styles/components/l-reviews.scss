@@ -9,8 +9,6 @@
     grid-template-columns: repeat(auto-fit, minmax(rem(320), 1fr));
     gap: rem(20) rem(32);
   }
-  &__item {
-  }
 }
 
 .l-review {
@@ -20,12 +18,12 @@
   flex-direction: column;
   align-items: flex-start;
   row-gap: rem(24);
-  &__rating {
-  }
+  height: 100%;
   &__text {
     line-height: 1.5;
     color: #333333;
     font-size: fluid(16, 18);
+    flex-grow: 1;
   }
   &__info {
   }

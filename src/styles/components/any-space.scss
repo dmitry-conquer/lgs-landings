@@ -1,10 +1,6 @@
 @use "../helpers/" as *;
 
 .any-space {
-  &__container {
-  }
-  &__title {
-  }
   &__items {
     display: flex;
     justify-content: center;

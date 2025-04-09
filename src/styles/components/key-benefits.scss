@@ -1,0 +1,110 @@
+@use "../helpers/" as *;
+
+.key-benefits {
+  overflow: hidden;
+  &__container {
+    display: flex;
+    gap: rem(20) rem(24);
+    align-items: flex-start;
+    @include small {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+  &__content {
+    flex: 0 0 rem(406);
+    padding: fluid(16, 24);
+    border: 1px dashed rgba(0, 0, 0, 0.15);
+    @include small {
+      flex: 0 1 auto;
+    }
+  }
+  &__title {
+    color: #333;
+    font-size: rem(20);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: rem(20);
+  }
+  &__content-body {
+    display: flex;
+    gap: fluid(16, 72);
+    padding: fluid(16, 24);
+    align-items: flex-start;
+    width: rem(406);
+    @include x-small {
+      width: 100%;
+      max-width: rem(406);
+    }
+  }
+
+  &__list {
+    padding-top: rem(20);
+    flex: 0 1 rem(262);
+    ul {
+      padding-left: 0;
+      li {
+        list-style: none;
+        padding-left: 0;
+        color: #333;
+        &:not(:last-of-type) {
+          margin-bottom: rem(32);
+        }
+        h3 {
+          font-size: rem(20);
+          line-height: 1.3;
+          margin-bottom: rem(16);
+          font-weight: 700;
+        }
+        p {
+          line-height: 1.5;
+          font-size: rem(18);
+        }
+      }
+    }
+  }
+  &__images {
+    flex: 0 1 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: end;
+    align-items: start;
+    gap: rem(20);
+    position: relative;
+    @include large {
+      grid-template-columns: 1fr;
+      justify-content: stretch;
+    }
+
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: rem(254);
+      top: rem(123);
+      left: 0;
+      background-color: #f2d879;
+      @include medium {
+        display: none;
+      }
+    }
+  }
+  &__images-left {
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+    @include large {
+      display: none;
+    }
+  }
+  &__images-right {
+    padding-top: fluid(0, 221);
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+    @include large {
+      padding-top: 0;
+    }
+  }
+}

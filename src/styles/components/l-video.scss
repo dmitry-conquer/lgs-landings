@@ -1,0 +1,18 @@
+@use "../helpers/" as *;
+
+.l-video {
+  &__container {
+    border: 1px dashed rgba(0, 0, 0, 0.15);
+    padding: rem(20) !important;
+  }
+  &__inner {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: fluid(404, 626);
+    width: 100%;
+  }
+  &__button {
+  }
+}

@@ -1,0 +1,45 @@
+@use "../helpers/" as *;
+
+.l-our-services {
+  &__container {
+  }
+  &__title {
+    margin-bottom: fluid(30, 40);
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(340), 1fr));
+    @include x-small {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.l-our-service {
+  border: 1px dashed rgba(0, 0, 0, 0.15);
+  padding: fluid(16, 32);
+  display: flex;
+  flex-direction: column;
+
+  img {
+    margin-bottom: fluid(16, 24);
+    width: 100%;
+    height: rem(320);
+    object-fit: cover;
+    @include x-small {
+      height: auto;
+    }
+  }
+  h3 {
+    color: #333;
+    font-size: rem(24);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: rem(24);
+  }
+  p {
+    color: #000;
+    font-size: rem(18);
+    line-height: 1.5;
+  }
+}
