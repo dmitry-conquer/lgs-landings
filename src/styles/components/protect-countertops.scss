@@ -1,0 +1,61 @@
+@use "../helpers/" as *;
+
+.protect-countertops {
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__image {
+    border: 1px dashed #f2d879;
+    padding: fluid(16, 24);
+    flex: 0 1 rem(531);
+    @include small {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__body {
+    background-color: #333;
+    padding: fluid(24, 112) fluid(16, 64);
+    margin-left: rem(-36);
+    @include small {
+      margin-left: 0;
+    }
+  }
+  &__content {
+    text-align: center;
+    h2 {
+      color: #fff;
+      font-size: rem(30);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: rem(24);
+    }
+    p {
+      color: #fff;
+      font-size: rem(24);
+      line-height: 1.5;
+      margin-bottom: rem(32);
+      a {
+        color: #f2d879;
+        font-weight: 700;
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: rem(16);
+    a,
+    button {
+      @include x-small {
+        width: 100%;
+      }
+    }
+  }
+}

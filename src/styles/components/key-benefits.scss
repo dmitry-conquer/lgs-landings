@@ -29,7 +29,7 @@
   &__content-body {
     display: flex;
     gap: fluid(16, 72);
-    padding: fluid(16, 24);
+    padding-inline: fluid(16, 24);
     align-items: flex-start;
     width: rem(406);
     @include x-small {

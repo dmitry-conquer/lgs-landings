@@ -1,4 +1,4 @@
-@use "reset";
+// @use "reset";
 @use "helpers" as *;
 @use "./components/l-hero-1";
 @use "./components/l-hero-2";
@@ -15,9 +15,11 @@
 @use "./components/l-faq";
 @use "./components/l-preservation";
 @use "./components/shield-surfaces";
+@use "./components/modal";
+@use "./components/protect-countertops";
 @use "./components/l-our-services";
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 .landing-page {
   font-family: "Montserrat", sans-serif;
@@ -41,7 +43,7 @@
 }
 
 .l-container {
-  max-width: rem(1450);
+  max-width: 1450px;
   padding: 0 rem(20);
   margin: 0 auto;
 }
@@ -68,6 +70,9 @@
     border: 1px solid #e6cc6d;
     color: #e6cc6d;
     background-color: transparent;
+    @include hover {
+      color: #e6cc6d !important;
+    }
   }
 
   &_white {

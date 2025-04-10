@@ -230,11 +230,63 @@
             </div>
           </div>
         </section>
+
+        <section class="protect-countertops l-section">
+          <div class="protect-countertops__container l-container">
+            <div class="protect-countertops__image">
+              <img src="/images/l2/9.webp" alt="" />
+            </div>
+            <div class="protect-countertops__body">
+              <div class="protect-countertops__content">
+                <h2>Ready to Protect Your Countertops?</h2>
+                <p>Call us today at <a href="#">215-491-7814</a> or fill out the form above to get started!</p>
+              </div>
+              <di class="protect-countertops__buttons">
+                <button data-micromodal-trigger="landing-form-popup" class="landing-button" type="button">Schedule an Appointment</button>
+                <a href="#" class="landing-button landing-button_stroke">Contact us</a>
+              </di>
+            </div>
+          </div>
+        </section>
       </main>
+      <div id="landing-form-popup" aria-hidden="true" class="modal">
+        <div tabindex="-1" data-micromodal-close class="modal__body">
+          <div class="modal__inner">
+            <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" class="modal__content">
+              <button class="modal__close" type="button" data-micromodal-close>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+              </button>
+              <h2 class="modal__title">Schedule A Free Safety Assessment Now</h2>
+              <div class="modal__form">
+                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                <script>
+                  hbspt.forms.create({
+                    portalId: "22215653",
+                    formId: "814a795c-e49a-4f04-860f-951d88cf3c0d",
+                    region: "na1",
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       {{> footer}}
     </div>
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script>
+      MicroModal.init();
+      disableScroll: true
+    </script>
     <script type="text/javascript">
       const lightbox = GLightbox({
         selector: ".glightbox",
